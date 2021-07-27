@@ -1,11 +1,7 @@
 import Head from 'next/head'
 import styles from './layout.module.css'
-import typographyStyles from '../../styles/typographies.module.css'
-import Link from 'next/link'
-import ImageCircle from '../atoms/imageCircle'
 import { ImageSize } from '../atoms/imageCircle'
-import { useTranslations } from 'next-intl'
-import {useRouter} from 'next/dist/client/router';
+import HeaderWithImage from '../molecules/headerWithImage'
 
 interface LayoutProps {
   children: React.ReactNode,
@@ -16,8 +12,6 @@ const name = "Dagon"
 export const siteTitle = "Dev from R'lyeh"
 
 export default function Layout ({ children, home }: LayoutProps) {
-  const t = useTranslations('Layout')
-
   return (
     <div className={styles.container}>
       <Head>
@@ -35,41 +29,8 @@ export default function Layout ({ children, home }: LayoutProps) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className={styles.header}>
-        {profileImage(home)}
-      </header>
+      <HeaderWithImage source={'/images/profile.jpg'} name={name} size={ImageSize.Medium} />
       <main>{children}</main>
-      {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/">
-            <a>{t('backToRoot')}</a>
-          </Link>
-        </div>
-      )}
     </div>
-  )
-}
-
-const profileImage = (isHome: boolean) => {
-  return (
-    isHome ? (
-      <>
-        <ImageCircle src={"/images/profile.jpg"} name={name} size={ImageSize.Medium} />
-        <h1 className={typographyStyles.heading2Xl}>{name}</h1>
-      </>
-    ) : (
-      <>
-        <Link href="/">
-          <a>
-            <ImageCircle src={"/images/profile.jpg"} name={name} size={ImageSize.Small} />
-          </a>
-        </Link>
-        <h2 className={typographyStyles.headingLg}>
-          <Link href="/">
-            <a className={typographyStyles.colorInherit}>{name}</a>
-          </Link>
-        </h2>
-      </>
-    )
   )
 }

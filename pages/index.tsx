@@ -1,6 +1,6 @@
 import Layout from '../components/layout'
 import { PostType, getSortedPostsData } from '../lib/posts'
-import { GetStaticProps } from 'next'
+import { GetStaticProps, GetStaticPropsContext } from 'next'
 import Link from 'next/link'
 import typographyStyles from '../styles/typographies.module.css'
 import utilStyles from '../styles/utils.module.css'

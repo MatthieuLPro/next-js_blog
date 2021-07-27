@@ -1,15 +1,20 @@
 import Layout from '../../components/layout'
 import Head from 'next/head'
+import Link from 'next/link'
 import { PostType } from '../../lib/posts'
 import typographiesStyles from '../../styles/typographies.module.css'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import { getAllPostIds, getPostData } from '../../lib/posts'
+import styles from './[id].module.css'
+import {useTranslations} from 'next-intl'
 
 interface PostProps {
   postData: PostType
 }
 
 export default function Post({ postData }: PostProps) {
+  const t = useTranslations('Posts')
+
   return (
     <Layout home={false}>
       <Head>
@@ -21,6 +26,11 @@ export default function Post({ postData }: PostProps) {
           {postData.date}
         </div>
       </article>
+      <div className={styles.backToHome}>
+          <Link href="/">
+            <a>{t('backToRoot')}</a>
+          </Link>
+        </div>
     </Layout>
   )
 }
@@ -33,11 +43,14 @@ export const getStaticPaths: GetStaticPaths = async () => {
   }
 }
 
-export const getStaticProps: GetStaticProps = async ({params}) => {
-  const postData = await getPostData(params?.id as string)
+export const getStaticProps: GetStaticProps = async (context) => {
+  const postData = await getPostData(context.params?.id as string)
+  const { locale } = context
+
   return {
     props: {
-      postData
+      postData,
+      messages: { ...require(`../../messages/posts/${locale}.json`) },
     }
   }
 }
