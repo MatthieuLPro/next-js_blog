@@ -1,10 +1,12 @@
 import Layout from '../components/layout'
+import Head from 'next/head'
 import { PostType, getSortedPostsData } from '../lib/posts'
-import { GetStaticProps, GetStaticPropsContext } from 'next'
+import { GetStaticProps } from 'next'
 import Link from 'next/link'
 import typographyStyles from '../styles/typographies.module.css'
 import utilStyles from '../styles/utils.module.css'
 import {useTranslations} from 'next-intl'
+import { TITLE } from '../lib/constants'
 
 interface HomeProps {
   allPostsData: Array<PostType>
@@ -15,6 +17,9 @@ export default function Home({ allPostsData }: HomeProps) {
 
   return (
     <Layout home>
+      <Head>
+        <title>{ TITLE }</title>
+      </Head>
       <section className={typographyStyles.headingMd}>
         <p>{t('description', {
           code: (children) => <b>{children}</b>
