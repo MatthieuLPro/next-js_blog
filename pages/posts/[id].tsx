@@ -25,6 +25,7 @@ export default function Post({ postData }: PostProps) {
         <div className={typographiesStyles.lightText}>
           {postData.date}
         </div>
+        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
       <div className={styles.backToHome}>
           <Link href="/">
