@@ -4,10 +4,17 @@ import matter from 'gray-matter'
 import remark from 'remark'
 import html from 'remark-html'
 
-export type PostType = {
+export type PostIndexType = {
   id: string,
   title: string,
   date: string
+}
+
+export type PostShowType = {
+  id: string,
+  title: string,
+  date: string,
+  contentHtml: string
 }
 
 const postsDirectory: string = path.join(process.cwd(), 'resources')
@@ -24,7 +31,8 @@ export function getSortedPostsData() {
 
     return {
       id,
-      ...matterResult.data
+      title: matterResult.data.title,
+      date: matterResult.data.date
     }
   })
 

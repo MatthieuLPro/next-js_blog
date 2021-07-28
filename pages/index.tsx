@@ -1,6 +1,6 @@
 import Layout from '../components/layout'
 import Head from 'next/head'
-import { PostType, getSortedPostsData } from '../lib/posts'
+import { PostIndexType, getSortedPostsData } from '../lib/posts'
 import { GetStaticProps } from 'next'
 import Link from 'next/link'
 import typographyStyles from '../styles/typographies.module.css'
@@ -9,7 +9,7 @@ import {useTranslations} from 'next-intl'
 import { TITLE } from '../lib/constants'
 
 interface HomeProps {
-  allPostsData: Array<PostType>
+  allPostsData: Array<PostIndexType>
 }
 
 export default function Home({ allPostsData }: HomeProps) {
@@ -22,7 +22,11 @@ export default function Home({ allPostsData }: HomeProps) {
       </Head>
       <section className={typographyStyles.headingMd}>
         <p>{t('description', {
-          code: (children) => <b>{children}</b>
+          code: function boldItems(children) {
+            return (
+              <b>{children}</b>
+            )
+          }
         })}</p>
         <p>{t('welcome')}</p>
       </section>

@@ -1,7 +1,7 @@
 import Layout from '../../components/layout'
 import Head from 'next/head'
 import Link from 'next/link'
-import { PostType } from '../../lib/posts'
+import { PostShowType } from '../../lib/posts'
 import typographiesStyles from '../../styles/typographies.module.css'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import { getAllPostIds, getPostData } from '../../lib/posts'
@@ -9,7 +9,7 @@ import styles from './[id].module.css'
 import {useTranslations} from 'next-intl'
 
 interface PostProps {
-  postData: PostType
+  postData: PostShowType
 }
 
 export default function Post({ postData }: PostProps) {
