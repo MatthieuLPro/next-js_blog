@@ -7,13 +7,18 @@ import html from 'remark-html'
 export type PostIndexType = {
   id: string,
   title: string,
-  date: string
+  date: string,
+  categories: string[],
+  read_time: string,
+  display_rank: number
 }
 
 export type PostShowType = {
   id: string,
   title: string,
   date: string,
+  categories: string[],
+  read_time: string,
   contentHtml: string
 }
 
@@ -29,14 +34,19 @@ export function getSortedPostsData() {
 
     const matterResult = matter(fileContents)
 
+    const { title, date, categories, read_time, display_rank } = matterResult.data;
+
     return {
       id,
-      title: matterResult.data.title,
-      date: matterResult.data.date
+      title,
+      date,
+      categories,
+      read_time,
+      display_rank,
     }
   })
 
-  return allPostsData.sort(({ date: a }, { date: b }) => {
+  return allPostsData.sort(({ display_rank: a }, { display_rank: b }) => {
     if (a < b) {
       return 1
     } else if (a > b) {

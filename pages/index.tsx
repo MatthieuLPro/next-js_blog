@@ -33,14 +33,14 @@ export default function Home({ allPostsData }: HomeProps) {
       <section>
         <h2 className={typographyStyles.headingLg}>{t('title')}</h2>
         <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, date, title }) => 
+          {allPostsData.map(({ id, date, title, read_time, categories }) =>
             <li className={utilStyles.listItem} key={id}>
               <Link href={`/posts/${id}`}>
                 <a>{title}</a>
               </Link>
               <br/>
               <small className={typographyStyles.ligthText}>
-                {date}
+                {date} · {read_time} · {categories.join(' - ')}
               </small>
             </li>
           )}

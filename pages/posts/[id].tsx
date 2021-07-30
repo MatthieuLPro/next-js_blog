@@ -23,7 +23,7 @@ export default function Post({ postData }: PostProps) {
       <article>
         <h1 className={typographiesStyles.headingXl}>{postData.title}</h1>
         <div className={typographiesStyles.lightText}>
-          {postData.date}
+          {postData.date} · {postData.read_time} · {postData.categories.join(' - ')}
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
