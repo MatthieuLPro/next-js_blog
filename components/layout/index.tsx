@@ -10,6 +10,7 @@ interface LayoutProps {
 }
 
 const IMAGE_PATH: string = '/images/profile.jpg'
+const THEME: string = 'okaidia'
 
 export default function Layout ({ children, home }: LayoutProps) {
   return (
@@ -28,6 +29,10 @@ export default function Layout ({ children, home }: LayoutProps) {
         />
         <meta name="og:title" content={SITE_TITLE} />
         <meta name="twitter:card" content="summary_large_image" />
+        <link
+          href={`https://unpkg.com/prismjs@0.0.1/themes/prism-${THEME}.css`}
+          rel="stylesheet"
+        />
       </Head>
       <HeaderWithImage source={IMAGE_PATH} name={NAME} size={ImageSize.Medium} />
       <main>{children}</main>

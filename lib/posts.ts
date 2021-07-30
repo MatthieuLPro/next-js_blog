@@ -75,7 +75,7 @@ export const getPostData = async (id: string) => {
 
   const matterResult = matter(fileContents)
 
-  const processedContent = await remark().use(html).process(matterResult.content)
+  const processedContent = await remark().use(html).use(require('remark-prism')).process(matterResult.content)
   const contentHtml = processedContent.toString()
 
   return {
