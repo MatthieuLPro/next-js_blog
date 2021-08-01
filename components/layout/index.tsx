@@ -1,18 +1,18 @@
-import Head from 'next/head'
-import styles from './layout.module.css'
-import { ImageSize } from '../atoms/imageCircle'
-import HeaderWithImage from '../molecules/headerWithImage'
-import { SITE_TITLE } from '../../lib/constants'
+import Head from "next/head";
+import styles from "./layout.module.css";
+import { ImageSize } from "../atoms/imageCircle";
+import HeaderWithImage from "../molecules/headerWithImage";
+import { SITE_TITLE } from "../../lib/constants";
 
 interface LayoutProps {
-  children: React.ReactNode,
-  home: boolean,
+  children: React.ReactNode;
+  home: boolean;
 }
 
-const IMAGE_PATH: string = '/images/profile.jpg'
-const THEME: string = 'okaidia'
+const IMAGE_PATH: string = "/images/profile.jpg";
+const THEME: string = "okaidia";
 
-export default function Layout ({ children, home }: LayoutProps) {
+export default function Layout({ children, home }: LayoutProps) {
   return (
     <div className={styles.container}>
       <Head>
@@ -34,8 +34,12 @@ export default function Layout ({ children, home }: LayoutProps) {
           rel="stylesheet"
         />
       </Head>
-      <HeaderWithImage source={IMAGE_PATH} name={SITE_TITLE} size={ImageSize.Medium} />
+      <HeaderWithImage
+        source={IMAGE_PATH}
+        name={SITE_TITLE}
+        size={ImageSize.Medium}
+      />
       <main>{children}</main>
     </div>
-  )
+  );
 }
