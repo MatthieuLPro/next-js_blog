@@ -1,5 +1,5 @@
-import Image from "next/image";
-import utilStyles from "../../../styles/utils.module.css";
+import Image from 'next/image';
+import utilStyles from '../../../styles/utils.module.css';
 
 interface ImagesProps {
   src: string;

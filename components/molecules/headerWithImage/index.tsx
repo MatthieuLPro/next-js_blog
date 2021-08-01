@@ -1,8 +1,8 @@
-import ImageCircle from "../../atoms/imageCircle";
-import { ImageSize } from "../../atoms/imageCircle";
-import typographyStyles from "../../../styles/typographies.module.css";
-import styles from "./header.module.css";
-import Link from "next/link";
+import Link from 'next/link';
+import ImageCircle, { ImageSize } from '../../atoms/imageCircle';
+
+import typographyStyles from '../../../styles/typographies.module.css';
+import styles from './header.module.css';
 
 interface HeaderWithImageProps {
   source: string;

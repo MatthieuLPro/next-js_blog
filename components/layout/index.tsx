@@ -1,18 +1,17 @@
-import Head from "next/head";
-import styles from "./layout.module.css";
-import { ImageSize } from "../atoms/imageCircle";
-import HeaderWithImage from "../molecules/headerWithImage";
-import { SITE_TITLE } from "../../lib/constants";
+import Head from 'next/head';
+import styles from './layout.module.css';
+import { ImageSize } from '../atoms/imageCircle';
+import HeaderWithImage from '../molecules/headerWithImage';
+import { SITE_TITLE } from '../../lib/constants';
 
 interface LayoutProps {
   children: React.ReactNode;
-  home: boolean;
 }
 
-const IMAGE_PATH: string = "/images/profile.jpg";
-const THEME: string = "okaidia";
+const IMAGE_PATH = '/images/profile.jpg';
+const THEME = 'okaidia';
 
-export default function Layout({ children, home }: LayoutProps) {
+export default function Layout({ children }: LayoutProps) {
   return (
     <div className={styles.container}>
       <Head>
