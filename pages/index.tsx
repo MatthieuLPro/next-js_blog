@@ -6,7 +6,7 @@ import Link from 'next/link'
 import typographyStyles from '../styles/typographies.module.css'
 import utilStyles from '../styles/utils.module.css'
 import {useTranslations} from 'next-intl'
-import { TITLE } from '../lib/constants'
+import { TITLE, NAME } from '../lib/constants'
 
 interface HomeProps {
   allPostsData: Array<PostIndexType>
@@ -26,7 +26,8 @@ export default function Home({ allPostsData }: HomeProps) {
             return (
               <b>{children}</b>
             )
-          }
+          },
+          name: NAME
         })}</p>
         <p>{t('welcome')}</p>
       </section>
