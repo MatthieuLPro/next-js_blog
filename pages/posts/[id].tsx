@@ -1,3 +1,7 @@
+// TODO: Fix linter
+/* eslint-disable import/no-dynamic-require */
+/* eslint-disable global-require */
+/* eslint-disable react/no-danger */
 import Head from 'next/head';
 import Link from 'next/link';
 import { GetStaticPaths, GetStaticProps } from 'next';
