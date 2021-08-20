@@ -2,7 +2,12 @@ import Head from 'next/head';
 import styles from './layout.module.css';
 import { ImageSize } from '../atoms/imageCircle';
 import HeaderWithImage from '../molecules/headerWithImage';
-import { WEBSITE_TITLE, DESCRIPTION, WEBSITE_URL, NAME } from '../../lib/constants';
+import {
+  WEBSITE_TITLE,
+  DESCRIPTION,
+  WEBSITE_URL,
+  NAME,
+} from '../../lib/constants';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -19,7 +24,11 @@ export default function Layout({ children }: LayoutProps) {
         <meta name="description" content={DESCRIPTION} />
         <meta property="og:type" content="website" />
         <meta name="og:title" property="og:title" content={WEBSITE_TITLE} />
-        <meta name="og:description" property="og:description" content={DESCRIPTION} />
+        <meta
+          name="og:description"
+          property="og:description"
+          content={DESCRIPTION}
+        />
         <meta property="og:site_name" content={WEBSITE_TITLE} />
         <meta property="og:url" content={WEBSITE_URL} />
         <meta
