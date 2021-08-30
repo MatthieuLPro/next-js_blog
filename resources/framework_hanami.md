@@ -3,7 +3,7 @@ title: 'Aperçu du framework web Hanami'
 date: '03 août, 2021'
 categories: ['Web']
 readTime: '3 minutes'
-displayRank: 3
+displayRank: 1
 ---
 <p align="center">
   <img src="../images/hanami_introduction_logo.jpg" title="Logo du framework Hanami" alt="Logo du framework Hamani" />
