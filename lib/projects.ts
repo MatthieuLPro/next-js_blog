@@ -38,8 +38,7 @@ export function getSortedProjectsData() {
 
     const matterResult = matter(fileContents);
 
-    const { title, categories, displayRank, logo } =
-      matterResult.data;
+    const { title, categories, displayRank, logo } = matterResult.data;
 
     return {
       id,

@@ -7,8 +7,11 @@ import Link from 'next/link';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { useTranslations } from 'next-intl';
 import Layout from '../../components/layout';
-import { ProjectShowType, getAllProjectIds, getProjectData } from '../../lib/projects';
-import typographiesStyles from '../../styles/typographies.module.css';
+import {
+  ProjectShowType,
+  getAllProjectIds,
+  getProjectData,
+} from '../../lib/projects';
 
 import styles from './[id].module.css';
 
@@ -17,7 +20,7 @@ interface ProjectProps {
 }
 
 export default function Post({ projectData }: ProjectProps) {
-  const t = useTranslations('Posts');
+  const t = useTranslations('Projects');
 
   return (
     <Layout>
@@ -25,11 +28,6 @@ export default function Post({ projectData }: ProjectProps) {
         <title>{projectData.title}</title>
       </Head>
       <article>
-        {/* <h1 className={typographiesStyles.headingXl}>{projectData.title}</h1> */}
-        {/* <div className={typographiesStyles.lightText}>
-          {projectData.date} · {projectData.readTime} ·{' '}
-          {projectData.categories.join(' - ')}
-        </div> */}
         <div dangerouslySetInnerHTML={{ __html: projectData.contentHtml }} />
       </article>
       <div className={styles.backToHome}>

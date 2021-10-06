@@ -34,15 +34,15 @@ export default function Projects({ allProjectsData }: ProjectsProps) {
         </p>
       </section>
       <section className={styles.projects}>
-        {allProjectsData.map(({ id, title, categories, logo }) => (
+        {allProjectsData.map(({ id, logo }) => (
           <div className={styles.project} key={id}>
             <Link href={`/projects/${id}`}>
               <a>
                 <img
-                  src={`../images/projects/` + logo}
+                  src={`../images/projects/${logo}`}
                   title="Tres bon ratio entre actions basiques et strategiques"
                   alt="Tres bon ratio entre actions basiques et strategiques"
-                />  
+                />
               </a>
             </Link>
           </div>
