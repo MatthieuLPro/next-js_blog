@@ -6,16 +6,16 @@ import { GetStaticProps } from 'next';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import Layout from '../components/layout';
-import { PostIndexType, getSortedPostsData } from '../lib/posts';
+import { ProjectIndexType, getSortedProjectsData } from '../lib/projects';
 import typographyStyles from '../styles/typographies.module.css';
-import utilStyles from '../styles/utils.module.css';
 import { TITLE, NAME } from '../lib/constants';
+import styles from './projects.module.css';
 
-interface HomeProps {
-  allPostsData: Array<PostIndexType>;
+interface ProjectsProps {
+  allProjectsData: Array<ProjectIndexType>;
 }
 
-export default function Home({ allPostsData }: HomeProps) {
+export default function Projects({ allProjectsData }: ProjectsProps) {
   const t = useTranslations('Home');
 
   return (
@@ -33,32 +33,32 @@ export default function Home({ allPostsData }: HomeProps) {
           })}
         </p>
       </section>
-      <section>
-        <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, date, title, readTime, categories }) => (
-            <li className={utilStyles.listItem} key={id}>
-              <Link href={`/posts/${id}`}>
-                <a>{title}</a>
-              </Link>
-              <br />
-              <small className={typographyStyles.ligthText}>
-                {date} · {readTime} · {categories.join(' - ')}
-              </small>
-            </li>
-          ))}
-        </ul>
+      <section className={styles.projects}>
+        {allProjectsData.map(({ id, title, categories, logo }) => (
+          <div className={styles.project} key={id}>
+            <Link href={`/projects/${id}`}>
+              <a>
+                <img
+                  src={`../images/projects/` + logo}
+                  title="Tres bon ratio entre actions basiques et strategiques"
+                  alt="Tres bon ratio entre actions basiques et strategiques"
+                />  
+              </a>
+            </Link>
+          </div>
+        ))}
       </section>
     </Layout>
   );
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const allPostsData = getSortedPostsData();
+  const allProjectsData = getSortedProjectsData();
   const { locale } = context;
 
   return {
     props: {
-      allPostsData,
+      allProjectsData,
       messages: { ...require(`../messages/home/${locale}.json`) },
     },
   };

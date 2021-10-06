@@ -1,0 +1,14 @@
+.projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project {
+  margin: 15px 0;
+  transition: transform .2s;
+}
+
+.project:hover {
+  transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}

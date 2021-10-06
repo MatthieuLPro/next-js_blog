@@ -7,46 +7,46 @@ import matter from 'gray-matter';
 import remark from 'remark';
 import html from 'remark-html';
 
-export type PostIndexType = {
+export type ProjectIndexType = {
   id: string;
   title: string;
-  date: string;
   categories: string[];
-  readTime: string;
   displayRank: number;
+  logo: string;
 };
 
-export type PostShowType = {
+export type ProjectShowType = {
   id: string;
   title: string;
-  date: string;
   categories: string[];
-  readTime: string;
+  startDate: string;
+  endDate: string;
+  status: string;
+  engine: string;
   contentHtml: string;
 };
 
-const postsDirectory: string = path.join(process.cwd(), 'resources/blog');
+const projectsDirectory: string = path.join(process.cwd(), 'resources/project');
 
-export function getSortedPostsData() {
-  const fileNames = fs.readdirSync(postsDirectory);
+export function getSortedProjectsData() {
+  const fileNames = fs.readdirSync(projectsDirectory);
   const allPostsData = fileNames.map((fileName) => {
     const id = fileName.replace(/\.md$/, '');
 
-    const fullPath = path.join(postsDirectory, fileName);
+    const fullPath = path.join(projectsDirectory, fileName);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
 
     const matterResult = matter(fileContents);
 
-    const { title, date, categories, readTime, displayRank } =
+    const { title, categories, displayRank, logo } =
       matterResult.data;
 
     return {
       id,
       title,
-      date,
       categories,
-      readTime,
       displayRank,
+      logo,
     };
   });
 
@@ -61,8 +61,8 @@ export function getSortedPostsData() {
   });
 }
 
-export function getAllPostIds() {
-  const fileNames = fs.readdirSync(postsDirectory);
+export function getAllProjectIds() {
+  const fileNames = fs.readdirSync(projectsDirectory);
 
   return fileNames.map((fileName) => ({
     params: {
@@ -71,8 +71,8 @@ export function getAllPostIds() {
   }));
 }
 
-export const getPostData = async (id: string) => {
-  const fullPath: string = path.join(postsDirectory, `${id}.md`);
+export const getProjectData = async (id: string) => {
+  const fullPath: string = path.join(projectsDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
 
   const matterResult = matter(fileContents);
