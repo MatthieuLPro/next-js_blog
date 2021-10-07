@@ -24,7 +24,7 @@ export default function Home({ allPostsData }: HomeProps) {
       <section>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title, readTime, categories }) => (
-            <Link href={`/posts/${id}`} key={id}>
+            <Link href={`/posts/${id}`} key={id} locale={false}>
               <li className={`${utilStyles.listItem} ${styles.post}`}>
                 <a className={styles.postTitle}>{`>> ${title}`}</a>
                 <br />
