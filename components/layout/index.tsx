@@ -8,6 +8,7 @@ import {
   WEBSITE_URL,
   NAME,
 } from '../../lib/constants';
+import Navbar from '../molecules/navbar';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -54,6 +55,8 @@ export default function Layout({ children }: LayoutProps) {
         name={WEBSITE_TITLE}
         size={ImageSize.Medium}
       />
+      <Navbar />
+      <hr style={{ margin: '20px' }} />
       <main>{children}</main>
     </div>
   );

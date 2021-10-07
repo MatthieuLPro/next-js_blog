@@ -32,11 +32,11 @@ export default function Post({ postData }: PostProps) {
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
-      <div className={styles.backToHome}>
-        <Link href="/">
-          <a>{t('backToRoot')}</a>
-        </Link>
-      </div>
+      <Link href="/">
+        <div className={styles.backToHome}>
+          <a className={styles.backToHomeText}>{t('backToRoot')}</a>
+        </div>
+      </Link>
     </Layout>
   );
 }

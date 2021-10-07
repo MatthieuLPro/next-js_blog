@@ -1,0 +1,50 @@
+.projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project {
+  margin: 15px 0;
+  transition: transform .2s;
+  position: relative;
+}
+
+.project:hover {
+  transform: scale(1.1);
+}
+
+.project:hover .overlay {
+  opacity: 1;
+}
+
+/* From https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_overlay_fade */
+.projectImage {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 94%;
+  width: 100%;
+  opacity: 0;
+  background-color: #8b37377c;
+}
+
+.projectTitle {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}

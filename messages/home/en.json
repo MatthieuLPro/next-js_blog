@@ -1,7 +1,11 @@
 {
   "Home": {
     "description": "Hi, I'm <code>{name}</code>. Software developer and translator (English/R'lyehian).",
-    "welcome": "Welcome on my blog.",
     "title": "Blog"
+  },
+  "Navbar": {
+    "indication": "You want to see ...",
+    "blog": "the blog",
+    "project": "the projects"
   }
 }

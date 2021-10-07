@@ -1,0 +1,18 @@
+.post {
+  color: black;
+}
+
+.post:hover {
+  background-color: #37528b7c;
+  color: white;
+  cursor: pointer;
+}
+
+.post:hover > .postTitle {
+  text-decoration: none;
+  color: white;
+}
+
+.postTitle {
+  color: black;
+}
