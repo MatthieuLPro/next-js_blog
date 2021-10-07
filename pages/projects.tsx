@@ -23,6 +23,7 @@ export default function Projects({ allProjectsData }: ProjectsProps) {
       <section className={styles.projects}>
         {allProjectsData.map(({ id, title, logo }) => (
           <div className={styles.project} key={id}>
+            {/* To remove when projects markdown are ready */}
             {/* <Link href={`/projects/${id}`}>
               <a> */}
             <Image
