@@ -6,7 +6,7 @@ startDate: '03 octobre 2020'
 endDate: '04 octobre 2020'
 status: 'Abandonnée'
 engine: 'Game maker 2'
-logo: 'wamk_logo.jpg'
+logo: 'wamk_logo.png'
 ---
 
 * Status : Cancel 

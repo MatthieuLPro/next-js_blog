@@ -3,3 +3,23 @@
   align-items: center;
   justify-content: space-around;
 }
+
+.navbarItem {
+  text-align: center;
+  color: black;
+  flex-basis: 50%;
+  font-weight: bold;
+}
+
+.navbarItem:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.navbarItemBlog:hover {
+  background-color: #37528b7c;
+}
+
+.navbarItemProject:hover {
+  background-color: #8b37377c;
+}

@@ -1,3 +1,18 @@
 .backToHome {
   margin: 3rem 0 0;
+  text-align: center;
+}
+
+.backToHome:hover {
+  background-color: #37528b7c;
+  cursor: pointer
+}
+
+.backToHome:hover > .backToHomeText {
+  text-decoration: none;
+  color: white;
+}
+
+.backToHomeText {
+  color: black;
 }

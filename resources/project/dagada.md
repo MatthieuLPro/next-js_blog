@@ -6,7 +6,7 @@ startDate: '01 janvier 2021'
 endDate: ''
 status: 'On development'
 engine: 'Unity'
-logo: 'wamk_logo.jpg'
+logo: 'dagada_logo.png'
 ---
 
 Un platformer 2D d'exploration réalisé avec le moteur Unity.

@@ -56,6 +56,7 @@ export default function Layout({ children }: LayoutProps) {
         size={ImageSize.Medium}
       />
       <Navbar />
+      <hr style={{ margin: '20px' }} />
       <main>{children}</main>
     </div>
   );

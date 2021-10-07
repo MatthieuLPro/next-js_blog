@@ -4,7 +4,8 @@
     "title": "Blog"
   },
   "Navbar": {
-    "blog": "Blog",
-    "project": "Project"
+    "indication": "You want to see ...",
+    "blog": "the blog",
+    "project": "the projects"
   }
 }

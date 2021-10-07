@@ -4,47 +4,35 @@
 import Head from 'next/head';
 import { GetStaticProps } from 'next';
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
 import Layout from '../components/layout';
 import { PostIndexType, getSortedPostsData } from '../lib/posts';
 import typographyStyles from '../styles/typographies.module.css';
 import utilStyles from '../styles/utils.module.css';
-import { TITLE, NAME } from '../lib/constants';
+import { TITLE } from '../lib/constants';
+import styles from './index.module.css';
 
 interface HomeProps {
   allPostsData: Array<PostIndexType>;
 }
 
 export default function Home({ allPostsData }: HomeProps) {
-  const t = useTranslations('Home');
-
   return (
     <Layout>
       <Head>
         <title>{TITLE}</title>
       </Head>
-      <section className={typographyStyles.headingMd}>
-        <p>
-          {t('description', {
-            code: function boldItems(children) {
-              return <b>{children}</b>;
-            },
-            name: NAME,
-          })}
-        </p>
-      </section>
       <section>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title, readTime, categories }) => (
-            <li className={utilStyles.listItem} key={id}>
-              <Link href={`/posts/${id}`}>
-                <a>{title}</a>
-              </Link>
-              <br />
-              <small className={typographyStyles.ligthText}>
-                {date} · {readTime} · {categories.join(' - ')}
-              </small>
-            </li>
+            <Link href={`/posts/${id}`} key={id}>
+              <li className={`${utilStyles.listItem} ${styles.post}`}>
+                <a className={styles.postTitle}>{`>> ${title}`}</a>
+                <br />
+                <small className={typographyStyles.ligthText}>
+                  {date} · {readTime} · {categories.join(' - ')}
+                </small>
+              </li>
+            </Link>
           ))}
         </ul>
       </section>

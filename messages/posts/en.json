@@ -1,9 +1,9 @@
 {
   "Posts": {
-    "backToRoot": "← Back to home"
+    "backToRoot": "<< Back to home"
   },
   "Navbar": {
-    "blog": "Blog",
-    "project": "Projects"
+    "blog": "the blog",
+    "project": "the projects"
   }
 }

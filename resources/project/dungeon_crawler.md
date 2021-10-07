@@ -6,7 +6,7 @@ startDate: '18 septembre 2019'
 endDate: '27 mai 2020'
 status: 'Abandonnée'
 engine: 'Unity'
-logo: 'wamk_logo.jpg'
+logo: 'dungeon_crawler_logo.png'
 ---
 
 * Status : Cancel 
