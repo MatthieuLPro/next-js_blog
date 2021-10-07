@@ -27,7 +27,7 @@ export default function Projects({ allProjectsData }: ProjectsProps) {
             {/* <Link href={`/projects/${id}`}>
               <a> */}
             <Image
-              src={`/../public/images/projects/${logo}`}
+              src={`/images/projects/${logo}`}
               title={title}
               alt={title}
               className={styles.projectImage}
