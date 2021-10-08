@@ -1,7 +1,7 @@
 ---
 title: "Petite analyse des mécaniques sur Final fantasy I"
 date: '21 septembre, 2021'
-categories: ['Game design']
+categories: ['game_design']
 readTime: '3 minutes'
 displayRank: 3
 ---

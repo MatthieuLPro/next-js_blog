@@ -5,5 +5,10 @@
   "Navbar": {
     "blog": "the blog",
     "project": "the projects"
+  },
+  "Tag": {
+    "game_design": "Game design",
+    "project": "Project",
+    "web": "Web"
   }
 }

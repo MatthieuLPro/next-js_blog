@@ -1,7 +1,7 @@
 ---
 title: "Introduction au tétrade élémentaire"
 date: '05 septembre, 2021'
-categories: ['Game design']
+categories: ['game_design']
 readTime: '3 minutes'
 displayRank: 2
 ---
