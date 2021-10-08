@@ -9,6 +9,7 @@ import { useTranslations } from 'next-intl';
 import Layout from '../../components/layout';
 import { PostShowType, getAllPostIds, getPostData } from '../../lib/posts';
 import typographiesStyles from '../../styles/typographies.module.css';
+import Tag from '../../components/atoms/tag';
 
 import styles from './[id].module.css';
 
@@ -28,7 +29,9 @@ export default function Post({ postData }: PostProps) {
         <h1 className={typographiesStyles.headingXl}>{postData.title}</h1>
         <div className={typographiesStyles.lightText}>
           {postData.date} · {postData.readTime} ·{' '}
-          {postData.categories.join(' - ')}
+          {postData.categories.map((category) => (
+            <Tag value={category} />
+          ))}
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
