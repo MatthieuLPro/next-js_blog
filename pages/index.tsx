@@ -10,6 +10,7 @@ import typographyStyles from '../styles/typographies.module.css';
 import utilStyles from '../styles/utils.module.css';
 import { TITLE } from '../lib/constants';
 import styles from './index.module.css';
+import Tag from '../components/atoms/tag';
 
 interface HomeProps {
   allPostsData: Array<PostIndexType>;
@@ -29,7 +30,10 @@ export default function Home({ allPostsData }: HomeProps) {
                 <a className={styles.postTitle}>{`>> ${title}`}</a>
                 <br />
                 <small className={typographyStyles.ligthText}>
-                  {date} · {readTime} · {categories.join(' - ')}
+                  {date} · {readTime} ·{' '}
+                  {categories.map((categorie) => (
+                    <Tag value={categorie} />
+                  ))}
                 </small>
               </li>
             </Link>

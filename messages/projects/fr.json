@@ -3,8 +3,13 @@
     "backToRoot": "<< Retour à l'index"
   },
   "Navbar": {
-    "indication": "Vous voulez voir ...",
     "blog": "le blog",
+    "indication": "Vous voulez voir ...",
     "project": "les projets"
+  },
+  "Tag": {
+    "game_design": "Game design",
+    "project": "Projet",
+    "web": "Web"
   }
 }

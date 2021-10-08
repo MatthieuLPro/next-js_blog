@@ -1,7 +1,7 @@
 ---
 title: 'Aperçu du framework web Hanami'
 date: '03 août, 2021'
-categories: ['Web']
+categories: ['web']
 readTime: '3 minutes'
 displayRank: 1
 ---

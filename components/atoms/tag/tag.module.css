@@ -1,0 +1,21 @@
+.tag {
+  border-radius: 5px;
+  color: white;
+  padding: 3px;
+  margin-right: 5px;
+}
+
+.web {
+  border: 1px solid #378b37;
+  background-color: #378b37;
+}
+
+.game_design {
+  border: 1px solid #61378b;
+  background-color: #61378b;
+}
+
+.project {
+  border: 1px solid #37768b;
+  background-color: #37768b;
+}
