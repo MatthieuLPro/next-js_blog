@@ -31,8 +31,8 @@ export default function Home({ allPostsData }: HomeProps) {
                 <br />
                 <small className={typographyStyles.ligthText}>
                   {date} · {readTime} ·{' '}
-                  {categories.map((categorie) => (
-                    <Tag value={categorie} />
+                  {categories.map((categorie, index) => (
+                    <Tag value={categorie} key={categorie + index} />
                   ))}
                 </small>
               </li>
