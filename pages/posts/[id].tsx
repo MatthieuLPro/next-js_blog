@@ -29,8 +29,8 @@ export default function Post({ postData }: PostProps) {
         <h1 className={typographiesStyles.headingXl}>{postData.title}</h1>
         <div className={typographiesStyles.lightText}>
           {postData.date} · {postData.readTime} ·{' '}
-          {postData.categories.map((category) => (
-            <Tag value={category} />
+          {postData.categories.map((category, index) => (
+            <Tag value={category} key={category + index} />
           ))}
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
