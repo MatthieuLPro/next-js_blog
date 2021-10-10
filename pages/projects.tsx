@@ -47,8 +47,8 @@ export default function Projects({ allProjectsData }: ProjectsProps) {
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const allProjectsData = getSortedProjectsData();
-  const { locale } = context;
+  const { locale, defaultLocale } = context;
+  const allProjectsData = getSortedProjectsData(locale || defaultLocale);
 
   return {
     props: {
