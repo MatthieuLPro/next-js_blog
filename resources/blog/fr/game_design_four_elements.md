@@ -31,7 +31,7 @@ Le schéma ci-dessous présente les liens entre chaque partie et montre la visib
 Le point d'entrée du joueur dans l'univers de votre jeu : il rassemble les parties <b>graphiques</b> et <b>sonores</b> qui auront pour but de créer l'<b>atmosphère</b> désirée. Pour s'aider à décrire cet élément, il est intéressant de réfléchir à un lexique pour décrire l'ambiance du jeu.
 
 ### Histoire
-C'est l'enchaînement d'évènement que vous allez présenter à vos joueurs. On peut faire attention à comment on dévoile l'histoire, de manière <b>linéaire</b> ou <b>évolutif</b> en fonction des choix du joueur. Un point important à prendre en compte et non-négligeable est <b>la courbe d'intérêt</b> du joueur qui sera grandement dépendante de l'ordre de vos évènements.
+C'est l'enchaînement d'événement que vous allez présenter à vos joueurs. On peut faire attention à comment on dévoile l'histoire, de manière <b>linéaire</b> ou <b>évolutive</b> en fonction des choix du joueur. Un point important à prendre en compte et non-négligeable est <b>la courbe d'intérêt</b> du joueur qui sera grandement dépendante de l'ordre de vos événements.
 
 ### Mécanique
 Cet élément est ce qui différencie un jeu de n'importe quel médium qui cherche à produire une expérience (film, musique ...). Il rassemble les <b>lois</b> et <b>règles</b> qui régissent votre univers comme par exemple les <b>actions</b> que peuvent réaliser le joueur, comment évolue-t-on dans l'<b>espace</b> ou encore comment s'écoule le <b>temps</b> dans votre jeu.
@@ -47,7 +47,7 @@ Ces 4 éléments forment un tout : le jeu que vous allez créer. Tous les élém
 * <em> L'histoire créée des mécaniques, est présentée par l'esthétique et supportée avec la technologie.</em>
 * <em> La technologie doit répondre au besoin de l'histoire en supportant les mécaniques et l'esthétique.</em>
 
-Pour finir, je vous partage un exemple très concret qui a créé la marque de fabrique d'une de mes séries préférées: le brouillard de la série Silent Hill. Cette mécanique renforce l'esthétique du jeu et a permis aux développeurs de contourner les limitations techniques du moteur de l'époque.
+Pour finir, je vous partage un exemple très concret qui a créé la marque de fabrique d'une de mes séries préférées : le brouillard de la série Silent Hill. Cette mécanique renforce l'esthétique du jeu et a permis aux développeurs de contourner les limitations techniques du moteur de l'époque.
 
 <p align="center">
   <img src="../images/four_elements_silent_hill.jpg" title="Qu'aurait été Silent Hill sans son brouillard ..." alt="Qu'aurait été Silent Hill sans son brouillard ..." />

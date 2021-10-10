@@ -28,7 +28,7 @@ Ces actions stratégiques produisent naturellement un gameplay émergent riche e
 # La stratégie dominante
 Pour mieux comprendre un jeu, nous pouvons nous poser 2 questions :
 * Les obstacles du jeu se surmontent car j'utilise plus ma <b>tête</b> ou mes <b>mains</b> ?
-* Le jeu demande plus de <b>réflexion</b> ou d'<b>éxécution</b> ? 
+* Le jeu demande plus de <b>réflexion</b> ou d'<b>exécution</b> ? 
 
 Pour moi, Final Fantasy I fait partie de la catégorie des <b>jeux de réflexion</b>. Il ne demande pas au joueur d'exécuter ses actions de manière précise, mais de <b>réfléchir aux stratégies</b> à adopter pour atteindre les objectifs de l'histoire (par le choix des magies, équipements, stratégies de combat ...).
 Le mode combat est alors comme un puzzle qui possède l'objectif de vaincre l'adversaire en trouvant la stratégie adéquate.
