@@ -53,8 +53,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const postData = await getPostData(context.params?.id as string);
-  const { locale } = context;
+  const { locale, defaultLocale } = context;
+  const postData = await getPostData(
+    context.params?.id as string,
+    locale || defaultLocale
+  );
 
   return {
     props: {

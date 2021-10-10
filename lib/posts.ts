@@ -25,14 +25,15 @@ export type PostShowType = {
   contentHtml: string;
 };
 
-const postsDirectory: string = path.join(process.cwd(), 'resources/blog');
+const postsDirectory = (locale: string) =>
+  path.join(process.cwd(), `resources/blog/${locale}`);
 
-export function getSortedPostsData() {
-  const fileNames = fs.readdirSync(postsDirectory);
+export function getSortedPostsData(locale: string | undefined) {
+  const fileNames = fs.readdirSync(postsDirectory(locale || ''));
   const allPostsData = fileNames.map((fileName) => {
     const id = fileName.replace(/\.md$/, '');
 
-    const fullPath = path.join(postsDirectory, fileName);
+    const fullPath = path.join(postsDirectory(locale || ''), fileName);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
 
     const matterResult = matter(fileContents);
@@ -62,7 +63,7 @@ export function getSortedPostsData() {
 }
 
 export function getAllPostIds() {
-  const fileNames = fs.readdirSync(postsDirectory);
+  const fileNames = fs.readdirSync(postsDirectory('fr'));
 
   return fileNames.map((fileName) => ({
     params: {
@@ -71,8 +72,8 @@ export function getAllPostIds() {
   }));
 }
 
-export const getPostData = async (id: string) => {
-  const fullPath: string = path.join(postsDirectory, `${id}.md`);
+export const getPostData = async (id: string, locale: string | undefined) => {
+  const fullPath: string = path.join(postsDirectory(locale || ''), `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
 
   const matterResult = matter(fileContents);
