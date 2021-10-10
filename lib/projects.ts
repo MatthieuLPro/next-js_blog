@@ -26,14 +26,15 @@ export type ProjectShowType = {
   contentHtml: string;
 };
 
-const projectsDirectory: string = path.join(process.cwd(), 'resources/project');
+const projectsDirectory = (locale: string) =>
+  path.join(process.cwd(), `resources/project/${locale}`);
 
-export function getSortedProjectsData() {
-  const fileNames = fs.readdirSync(projectsDirectory);
+export function getSortedProjectsData(locale: string | undefined) {
+  const fileNames = fs.readdirSync(projectsDirectory(locale || ''));
   const allPostsData = fileNames.map((fileName) => {
     const id = fileName.replace(/\.md$/, '');
 
-    const fullPath = path.join(projectsDirectory, fileName);
+    const fullPath = path.join(projectsDirectory(locale || ''), fileName);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
 
     const matterResult = matter(fileContents);
@@ -61,7 +62,9 @@ export function getSortedProjectsData() {
 }
 
 export function getAllProjectIds() {
-  const fileNames = fs.readdirSync(projectsDirectory);
+  // This hardcoded string means that the id of en and fr object
+  // should be the same in each language
+  const fileNames = fs.readdirSync(projectsDirectory('fr'));
 
   return fileNames.map((fileName) => ({
     params: {
@@ -70,8 +73,14 @@ export function getAllProjectIds() {
   }));
 }
 
-export const getProjectData = async (id: string) => {
-  const fullPath: string = path.join(projectsDirectory, `${id}.md`);
+export const getProjectData = async (
+  id: string,
+  locale: string | undefined
+) => {
+  const fullPath: string = path.join(
+    projectsDirectory(locale || ''),
+    `${id}.md`
+  );
   const fileContents = fs.readFileSync(fullPath, 'utf8');
 
   const matterResult = matter(fileContents);

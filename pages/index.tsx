@@ -45,8 +45,8 @@ export default function Home({ allPostsData }: HomeProps) {
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const allPostsData = getSortedPostsData();
-  const { locale } = context;
+  const { locale, defaultLocale } = context;
+  const allPostsData = getSortedPostsData(locale || defaultLocale);
 
   return {
     props: {

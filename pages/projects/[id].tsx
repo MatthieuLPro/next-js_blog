@@ -48,8 +48,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const projectData = await getProjectData(context.params?.id as string);
-  const { locale } = context;
+  const { locale, defaultLocale } = context;
+  const projectData = await getProjectData(
+    context.params?.id as string,
+    locale || defaultLocale
+  );
 
   return {
     props: {
