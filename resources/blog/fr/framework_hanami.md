@@ -11,7 +11,7 @@ displayRank: 1
 </p>
 Dans le but d'extraire une partie de l’architecture Ruby on rails d'une application, j’ai été sensibilisé à différentes notions que l’on retrouve dans le framework Hanami.
 
-En effet, quelques problèmes sont apparues, comme :
+En effet, quelques problèmes sont apparus, comme :
 
 - Apparition de nombreux Gods objects
 - Classes possédants un rôle mal défini
@@ -26,7 +26,7 @@ Hanami est un framework web pour le langage ruby se basant sur **l'hexagonal arc
   <figcaption style="text-align: center; font-size: 15px"><em>Schéma de l'hexagonal architecture</em></figcaption>
 </p>
 
-Cette structure permet de séparer la logique métier propre à l'application (*comprend les classes entities, interactors et repositories*) et la façon dont on présente les données à l’extérieur (*par exemple un client web ou une base de données comme data source*).
+Cette structure permet de séparer la logique métier, propre à l'application (*comprends les classes entities, interactors et repositories*) et la façon dont on présente les données à l’extérieur (*par exemple, un client web ou une base de données comme data source*).
 
 Un projet Hanami possède les fichiers suivants :
 ```
@@ -41,7 +41,7 @@ Un projet Hanami possède les fichiers suivants :
 ├── public
 └── spec
 ```
-Pour la suite nous allons nous concentrer sur 2 fichiers importants : <br />La **lib** et l'**apps**.
+Pour la suite, nous allons nous concentrer sur 2 fichiers importants : <br />La **lib** et l'**apps**.
 ### Fichier lib
 Rassemble toute la logique métier de notre application. Il comprend notamment les classes de type **entities** (*rassemblant la logique métier*) et **repositories** (*interface entre nos entities et les data sources*).
 ```
@@ -117,7 +117,7 @@ Cette classe peut se diviser en 3 parties :
 - **Schema** : Ce que l'on peut appeler un contrat, les paramètres doivent posséder l'attribut <span style="color: red">`:livre`</span> qui possède lui-même les attributs <span style="color: red">`:titre`</span> et <span style="color: red">`:auteur`</span>. Auquel cas l'appel ne sera pas valide.
 - **Call** : La fonction principale qui fait appel à des objets de la couche métier de notre architecture. On appelle ici le repository du model Livre pour faire persister un nouveau livre dans la data source.
 
-Le controller fait office de façade de communication entre l'extérieur et le coeur de notre application (*qui est la partie métier*). 
+Le controller fait office de façade de communication entre l'extérieur et le cœur de notre application (*qui est la partie métier*). 
 ### Repository
 Lisons cette classe repository (*qui est appelé par l'end-point create*) :
 ```ruby
@@ -133,7 +133,7 @@ end
 ```
 Nous avons ici une méthode qui permet d'obtenir une liste limitée des livres d'un auteur triés par date de publication. Ce repository hérite de <span style="color: red">`Hanami::Repository`</span> qui lui permet d'avoir quelques méthodes de base comme les opérations CRUD.
 
-Le repository est une façade de communication entre le coeur de notre application et l'extérieur (*une data source*). À noter que le repository doit être **agnostique** : il n'est pas couplé à une data source en particulier.
+Le repository est une façade de communication entre le cœur de notre application et l'extérieur (*une data source*). À noter que le repository doit être **agnostique** : il n'est pas couplé à une data source en particulier.
 ### Entity
 L'entity est la classe qui renferme toute la logique d'un objet représentant un besoin métier.
 ```ruby
@@ -156,7 +156,7 @@ Et voilà ! J'espère que cet aperçu vous donnera envie de continuer la découv
 Nous avons vu ensemble son architecture de base inspirée de l'**architecture hexagonale** et quelques classes essentielles au sein de l'application.
 Le fort découplage des classes et leur rôle clairement attribué permettent une bonne organisation et un testing simple. 
 
-Pour continuer votre exploration, le site officiel propose un guide pas à pas pour directement mettre les mains dans le cambouis. Egalement, s’informer sur l’[architecture hexagonale](https://blog.octo.com/architecture-hexagonale-trois-principes-et-un-exemple-dimplementation/) permets de mieux saisir l’ensemble.
+Pour continuer votre exploration, le site officiel propose un guide pas à pas pour directement mettre les mains dans le cambouis. Également, s’informer sur l’[architecture hexagonale](https://blog.octo.com/architecture-hexagonale-trois-principes-et-un-exemple-dimplementation/) permets de mieux saisir l’ensemble.
 
 Merci d'avoir lu cet article.
 # Sources
