@@ -1,6 +1,6 @@
 ---
-title: "Retour d'expérience de la Ludum dare 49"
-date: '07 octobre, 2021'
+title: "Post mortem Ludum dare 49"
+date: '14 octobre, 2021'
 categories: ['project']
 readTime: '2 minutes'
 displayRank: 4
