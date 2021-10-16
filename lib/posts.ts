@@ -63,16 +63,17 @@ export function getSortedPostsData(locale: string | undefined) {
 }
 
 export function getAllPostIds(locales: string[]) {
-  const paths = [];
-  for (const locale of locales) {
+  const paths: { params: { id: string }; locale: string }[] = [];
+
+  Object.values(locales).forEach((locale) => {
     const fileNames = fs.readdirSync(postsDirectory(locale));
-    for (const fileName of fileNames) {
+    Object.values(fileNames).forEach((fileName) => {
       paths.push({
         params: { id: fileName.replace(/\.md$/, '') },
         locale,
       });
-    }
-  }
+    });
+  });
   return paths;
 }
 
