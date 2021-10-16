@@ -62,16 +62,18 @@ export function getSortedPostsData(locale: string | undefined) {
   });
 }
 
-export function getAllPostIds() {
-  // This hardcoded string means that the id of en and fr object
-  // should be the same in each language
-  const fileNames = fs.readdirSync(postsDirectory('fr'));
-
-  return fileNames.map((fileName) => ({
-    params: {
-      id: fileName.replace(/\.md$/, ''),
-    },
-  }));
+export function getAllPostIds(locales: string[]) {
+  const paths = [];
+  for (const locale of locales) {
+    const fileNames = fs.readdirSync(postsDirectory(locale));
+    for (const fileName of fileNames) {
+      paths.push({
+        params: { id: fileName.replace(/\.md$/, '') },
+        locale,
+      });
+    }
+  }
+  return paths;
 }
 
 export const getPostData = async (id: string, locale: string | undefined) => {
