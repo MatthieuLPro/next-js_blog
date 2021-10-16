@@ -58,7 +58,7 @@ And that's it! I hope this overview will make you want to continue discovering t
 # At last
 Here is an introduction to <b>the elemental tetrad</b> that I hope will simplify your game analyses. Here we have seen the (very) basic outline of the 4 elements that describe a game.
 
-But it is a tool among others and it can be interesting to look at other methods to complete your analysis. I can advise you the ["Mechanics, Dynamics, Aesthetics"] approach (https://gamedevelopertips.com/mechanics-dynamics-aesthetics-game-design-theory-behind-games/) which gives a new point of view and can allow a better approach depending on the situation.
+But it is a tool among others and it can be interesting to look at other methods to complete your analysis. I can advise you the ["Mechanics, Dynamics, Aesthetics"](https://gamedevelopertips.com/mechanics-dynamics-aesthetics-game-design-theory-behind-games/) approach which gives a new point of view and can allow a better approach depending on the situation.
 
 Thank you for reading this article.
 # Sources
