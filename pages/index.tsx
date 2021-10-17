@@ -4,6 +4,7 @@
 import Head from 'next/head';
 import { GetStaticProps } from 'next';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import Layout from '../components/layout';
 import { PostIndexType, getSortedPostsData } from '../lib/posts';
 import typographyStyles from '../styles/typographies.module.css';
@@ -17,6 +18,7 @@ interface HomeProps {
 }
 
 export default function Home({ allPostsData }: HomeProps) {
+  const router = useRouter();
   return (
     <Layout>
       <Head>
@@ -25,7 +27,7 @@ export default function Home({ allPostsData }: HomeProps) {
       <section>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title, readTime, categories }) => (
-            <Link href={`/posts/${id}`} key={id} locale={false}>
+            <Link href={`/${router.locale}/posts/${id}`} key={id}>
               <li className={`${utilStyles.listItem} ${styles.post}`}>
                 <a className={styles.postTitle}>{`>> ${title}`}</a>
                 <br />

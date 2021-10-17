@@ -4,6 +4,7 @@
   },
   "Navbar": {
     "blog": "the blog",
+    "indication": "You want to see ...",
     "project": "the projects"
   },
   "Tag": {

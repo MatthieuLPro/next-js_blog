@@ -44,8 +44,9 @@ export default function Post({ postData }: PostProps) {
   );
 }
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = getAllPostIds();
+export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
+  const paths = getAllPostIds(locales || []);
+
   return {
     paths,
     fallback: false,
