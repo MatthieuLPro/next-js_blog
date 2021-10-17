@@ -18,7 +18,7 @@ I've always had some difficulty with my game analysis:
 I present here one of the tools that helps me to better understand a game.
 
 # The 4 elements
-This view separates a game into 4 interdependent elements: <b>aesthetics</b>, <b>story</b>, <b>mechanics</b> and <b>technology</b>.
+This view separates a game into 4 interdependent elements: <b>aesthetics</b>, <b>story</b>, <b>mechanics</b>, and <b>technology</b>.
 
 The diagram below shows the links between each part and indicates the visibility of the element by the player.
 
@@ -34,7 +34,7 @@ It is the player's entry point into the universe of your game: it gathers the <b
 This is the sequence of events you will present to your players. You can be careful about how you reveal the story, whether it is <b>linear</b> or <b>evolving</b> based on the player's choices. An important point to consider is the player's <b>interest curve</b>, which will depend greatly on the order of your events.
 
 ### Mechanics
-This element is what differentiates a game from any media that seeks to produce an experience (film, music...). It includes the <b>laws</b> and <b>rules</b> that govern your universe, such as the <b>actions</b> the player can perform, the way to move in <b>space</b> or the way <b>time</b> passes in your game.
+This element is what differentiates a game from any media that seeks to produce an experience (film, music...). It includes the <b>laws</b> and <b>rules</b> that govern your universes, such as the <b>actions</b> the player can perform, the way to move in <b>space</b>, or the way <b>time</b> passes in your game.
 
 ### Technology
 The almost invisible element for the player... But to be taken into account as a designer! It gathers the technical <b>means</b> and the <b>tools</b> which will allow the development of the game: we can think of a physical engine for a video game, or cards or dice for a board game... Each tool has its <b>limits</b> and you have to make sure that it will be able to meet the needs of the game created by the 3 other elements.
@@ -43,8 +43,8 @@ The almost invisible element for the player... But to be taken into account as a
 These 4 elements form a whole: the game you will create. All the elements work together to create the experience the player wants.
 
 * <em>Aesthetics describes the story and mechanics and is supported by technology.</em>
-* <em>A mechanic is justified by the story, is presented by the aesthetic, and is achievable via the technology.</em>
-* <em>The story creates the mechanics, is presented by the aesthetics, and supported by the technology.</em>
+* <em>A mechanic is justified by the story, is presented by the aesthetic, and is achievable via technology.</em>
+* <em>The story creates the mechanics, is presented by the aesthetics, and is supported by technology.</em>
 * <em>Technology must meet the need of the story by supporting the mechanics and the aesthetics.</em>
 
 Finally, I will share with you a very concrete example that created the trademark of one of my favorite series: the fog in the Silent Hill series. This mechanic reinforces the aesthetics of the game and allowed the developers to get around the technical limitations of the engine at the time.
@@ -58,7 +58,7 @@ And that's it! I hope this overview will make you want to continue discovering t
 # At last
 Here is an introduction to <b>the elemental tetrad</b> that I hope will simplify your game analyses. Here we have seen the (very) basic outline of the 4 elements that describe a game.
 
-But it is a tool among others and it can be interesting to look at other methods to complete your analysis. I can advise you the ["Mechanics, Dynamics, Aesthetics"](https://gamedevelopertips.com/mechanics-dynamics-aesthetics-game-design-theory-behind-games/) approach which gives a new point of view and can allow a better approach depending on the situation.
+But it is a tool among others and it can be interesting to look at other methods to complete your analysis. I can advise you on the ["Mechanics, Dynamics, Aesthetics"](https://gamedevelopertips.com/mechanics-dynamics-aesthetics-game-design-theory-behind-games/) approach which gives a new point of view and can allow a better approach depending on the situation.
 
 Thank you for reading this article.
 # Sources
